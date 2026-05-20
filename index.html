@@ -661,13 +661,17 @@
                     )
                     : 0;
 
-            const totalColumns =
-                baseColumns +
-                extraColumns;
+            const totalColumns = baseColumns;
+
+            const baseColumnPrice =
+                totalColumns * column;
+
+            const extraColumnPrice =
+                extraColumns * column;
 
             const totalColumnPrice =
-                totalColumns *
-                column;
+                baseColumnPrice +
+                extraColumnPrice;
 
             const totalMeshKg =
                 totalFenceLength *
